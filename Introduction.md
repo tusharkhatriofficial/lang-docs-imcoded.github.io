@@ -13,24 +13,24 @@ Despite the emergence of newer programming languages, C remains an important lan
 C language is a powerful and versatile programming language that remains relevant today due to its efficiency, portability, and flexibility. 
 
 * __Efficiency__:
-
-C language is a low-level language that provides direct access to hardware and system resources, making it ideal for system programming and embedded systems development. It allows developers to write code that executes quickly and with minimal memory usage.
+  
+  C language is a low-level language that provides direct access to hardware and system resources, making it ideal for system programming and embedded       systems development. It allows developers to write code that executes quickly and with minimal memory usage.
 
 * __Portability__: 
 
-C language is highly portable and can be used on a wide range of hardware platforms and operating systems. This makes it an ideal language for developing cross-platform applications and software libraries that can be used across different systems and devices.
+  C language is highly portable and can be used on a wide range of hardware platforms and operating systems. This makes it an ideal language for developing   cross-platform applications and software libraries that can be used across different systems and devices.
 
 * __Flexibility__: 
 
-C language is a general-purpose language that can be used for a wide range of programming tasks, including system programming, application programming, and web development. It provides a wide range of data types, operators, and control structures, giving developers the flexibility to write code for different applications and use cases.
+  C language is a general-purpose language that can be used for a wide range of programming tasks, including system programming, application programming,     and web development. It provides a wide range of data types, operators, and control structures, giving developers the flexibility to write code for         different applications and use cases.
 
 * __Legacy code__: 
 
-Many legacy systems and applications are still written in C language, and as a result, there is still a high demand for C developers who can maintain and update these systems. In addition, many modern systems and applications continue to use C or are built on top of existing C code, making it an essential language for software development.
+  Many legacy systems and applications are still written in C language, and as a result, there is still a high demand for C developers who can maintain and   update these systems. In addition, many modern systems and applications continue to use C or are built on top of existing C code, making it an essential   language for software development.
 
 * __Learning C improves understanding of programming concepts__: 
 
-Because C is a low-level language, learning it can help developers understand how computers work at a more fundamental level. It provides a foundation for understanding concepts such as memory management, pointers, and algorithms, which are important for developing efficient and effective code in other languages as well.
+  Because C is a low-level language, learning it can help developers understand how computers work at a more fundamental level. It provides a foundation     for understanding concepts such as memory management, pointers, and algorithms, which are important for developing efficient and effective code in other   languages as well.
 
 ## Why learn C
 
