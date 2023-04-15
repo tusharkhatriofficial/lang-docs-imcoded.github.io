@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Set up C environment for macOS.md",
+                "file": "Introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Set up C environment for macOS.md",
+                "file": "Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Set up C environment for macOS.md",
+                "file": "Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Set up C environment for macOS.md"
+                "file": "Introduction.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "5ba8975877cb5b4a",
   "lastOpenFiles": [
-    "Set up C environment for windows.md",
     "Set up C environment for macOS.md",
+    "Set up C environment for windows.md",
     "Introduction.md"
   ]
 }

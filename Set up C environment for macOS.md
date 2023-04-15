@@ -1,3 +1,5 @@
+# Set up C environment for macOS
+
 To develop C programs on macOS, there are two things that we need:
 
 1.  First, we need a **code editor** - this is the program that we will use to write our source code (a source code file is simply a text file, which has a ".c" extension, and which contains valid C code).
