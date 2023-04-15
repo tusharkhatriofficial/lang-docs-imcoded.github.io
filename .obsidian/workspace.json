@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0564ebb99127e41",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Getting Started with C.md",
+                "file": "Set up C environment for macOS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started with C.md",
+                "file": "Set up C environment for macOS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started with C.md",
+                "file": "Set up C environment for macOS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started with C.md"
+                "file": "Set up C environment for macOS.md"
               }
             }
           }
@@ -159,9 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d0564ebb99127e41",
+  "active": "5ba8975877cb5b4a",
   "lastOpenFiles": [
-    "Introduction.md",
-    "Getting Started with C.md"
+    "Set up C environment for windows.md",
+    "Set up C environment for macOS.md",
+    "Introduction.md"
   ]
 }

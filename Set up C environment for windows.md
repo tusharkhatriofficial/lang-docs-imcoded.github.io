@@ -1,9 +1,9 @@
 
-## Set up a C development environment for Windows
-
 Setting up a C development environment on Windows requires several steps. Below given is a basic guide to get you started:
 
-### Installing C/GCC Compiler for Windows
+
+
+## Installing C/GCC Compiler for Windows
 
 Following are the steps to download and install the MinGW GCC Compiler for windows.
 
@@ -62,7 +62,10 @@ Now the installation has been completed, click on Close to close the Installat
 
 > Error: Currently, the command prompt cannot detect the MinGW compiler (GCC) because the environment path variable has not been set. The environment path variable helps to detect the compiler in your whole system. It makes the alias name for the compiler, which denotes the path. Follow the steps below to set the environment path variable for MinGW on the Windows system.
 
-##### Setting up Path Variable
+
+
+
+## Setting up Path Variable
 
 To set up the path for the C compiler for windows, follows the below steps :
 
@@ -95,7 +98,9 @@ In the `User` variables for the _User_ section, select the **path** and cl
 
 Paste the path of the MinGW bin that was copied earlier and click on `Ok`. Now if you repeat Step 9 you will see the version of the compiler in the cmd.
 
-### Download a Source Code Editor
+
+
+## Download a Source Code Editor
 
 The source code editor is a text editor tool designed specially to edit or write the source code of any programming language. There is a basic source code editor present in Windows, i.e., Notepad, but it has limited features; therefore, for better formatting and features like multiple tabs, and plugins, you can use other editors like:
 
@@ -107,7 +112,8 @@ The source code editor is a text editor tool designed specially to edit or write
 3.  ATOM: (for Windows, Mac, and Linux): Atom helps you write code faster with a smart and flexible autocomplete.
 
 
-### Create and Run a C program
+
+## Create and Run a C program
 
 **Step 1**: Hello World in C.
 
