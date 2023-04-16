@@ -1,3 +1,4 @@
+<!-- 1-->
 ## C language and its history
 
 C language is a high-level programming language that was originally developed in the early 1970s by `Dennis Ritchie` at [Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs). C was designed to be a general-purpose language that could be used for a wide range of programming tasks, including system programming, application programming, and web development.
@@ -7,6 +8,8 @@ C language quickly gained popularity due to its efficiency, portability, and fle
 Over the years, C has become one of the most widely used programming languages in the world, and it has been used to develop everything from operating systems to mobile applications. Many other programming languages, including C++, Java, and Python, have been influenced by C and share some of its syntax and conventions.
 
 Despite the emergence of newer programming languages, C remains an important language for computer science students to learn, as it provides a solid foundation for understanding how computer programs work and how to write efficient and effective code.
+
+
 
 ## Why C is still relevant
 
@@ -32,6 +35,8 @@ C language is a powerful and versatile programming language that remains relevan
 
   Because C is a low-level language, learning it can help developers understand how computers work at a more fundamental level. It provides a foundation     for understanding concepts such as memory management, pointers, and algorithms, which are important for developing efficient and effective code in other   languages as well.
 
+
+
 ## Why learn C
 
 Learning C programming language is essential for several reasons. 
@@ -41,5 +46,6 @@ Firstly, C is one of the most widely used programming languages in the world, ma
 Secondly, learning C provides a strong understanding of computer programming principles, including memory management, data types, and syntax, which are fundamental concepts that apply to many programming languages. 
 
 Thirdly, C is a low-level language, which means it gives programmers more control over the hardware, making it ideal for developing system software and device drivers. Finally, learning C can also improve problem-solving skills and logical thinking abilities, which are valuable traits for any programmer.
+
 
 
