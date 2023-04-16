@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f90a9d184191a650",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Typecasting.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Variables, Constants and Literals.md",
+                "file": "Typecasting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Variables, Constants and Literals.md",
+                "file": "Typecasting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Variables, Constants and Literals.md"
+                "file": "Typecasting.md"
               }
             }
           }
@@ -146,10 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "692db55cb78269b7",
+  "active": "f90a9d184191a650",
   "lastOpenFiles": [
-    "Data Types.md",
     "Keywords and Identifiers.md",
-    "Variables, Constants and Literals.md"
+    "Typecasting.md",
+    "Variables, Constants and Literals.md",
+    "Data Types.md"
   ]
 }
