@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "00fdcc00f9af855a",
+    "id": "2b494d20b2b7542f",
     "type": "split",
     "children": [
       {
-        "id": "e39d7b34f726ccd5",
+        "id": "85b490b4c6f13813",
         "type": "tabs",
         "children": [
           {
-            "id": "4658a97f0ecea0a9",
+            "id": "48d67c5bb7ed637b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "C language and its history.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a6a666d808136370",
+    "id": "dde760df37fba050",
     "type": "split",
     "children": [
       {
-        "id": "510a9314a07f480a",
+        "id": "2f3ab2465d162320",
         "type": "tabs",
         "children": [
           {
-            "id": "c716d8ebd8d8501c",
+            "id": "03f308d23591215e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "5dab920151df8c29",
+            "id": "bd57e42dec37ef61",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "f5e21d492db59d60",
+            "id": "e4be513a88bd3086",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -68,19 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "a92b2523fbc4071a",
+    "id": "52da901bfa0144d0",
     "type": "split",
     "children": [
       {
-        "id": "d622f8aa825d8237",
+        "id": "d7d725a24bde00bc",
         "type": "tabs",
         "children": [
           {
-            "id": "2076be9c21dcf8a3",
+            "id": "12944cde57995f6c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "C language and its history.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "e3ec40f38921591e",
+            "id": "504d66b729c6f537",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "C language and its history.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "36d49b38002c28e2",
+            "id": "9a2d757585844434",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "9430aed6edb42452",
+            "id": "d3747b516eb2c6cc",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "C language and its history.md"
+              }
             }
           }
         ]
@@ -138,25 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c716d8ebd8d8501c",
+  "active": "48d67c5bb7ed637b",
   "lastOpenFiles": [
-    "Introduction/Set up C environment for windows.md",
-    "Introduction/Set up C environment for macOS.md",
-    "Introduction/C language and its history.md",
-    "Getting Started with C/Data Types.md",
-    "Getting Started with C/Variables, Constants and Literals.md",
-    "Getting Started with C/Keywords and Identifiers.md",
-    "Getting Started with C/C language and its history.md",
-    "Getting Started with C/Set up C environment for windows.md",
-    "Getting Started with C/Set up C environment for macOS.md",
-    "Getting Started with C",
-    "untitled folder",
-    "Introduction",
-    "Variables, Constants and Literals.md",
-    "Keywords and Identifiers.md",
-    "Data Types.md",
-    "Set up C environment for macOS.md",
     "Set up C environment for windows.md",
+    "Set up C environment for macOS.md",
     "C language and its history.md"
   ]
 }

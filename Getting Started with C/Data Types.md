@@ -1,4 +1,4 @@
-
+<!-- 2-->
 # Data Types
 
 In C programming language, data types are used to define variables that can hold different kinds of data. As the name suggests, a Datatype defines the **type of data** being used. Whenever we define a variable or use any data in the C language program, we have to specify the type of the data, so that the compiler knows what type of data to expect. 

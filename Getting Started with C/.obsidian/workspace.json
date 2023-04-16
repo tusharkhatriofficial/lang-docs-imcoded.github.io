@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "00fdcc00f9af855a",
+    "id": "9361f0f0cabc5af9",
     "type": "split",
     "children": [
       {
-        "id": "e39d7b34f726ccd5",
+        "id": "e626ca389459a3f5",
         "type": "tabs",
         "children": [
           {
-            "id": "4658a97f0ecea0a9",
+            "id": "692db55cb78269b7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Variables, Constants and Literals.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a6a666d808136370",
+    "id": "f81d9bb09bbe8463",
     "type": "split",
     "children": [
       {
-        "id": "510a9314a07f480a",
+        "id": "9f74868318615cfb",
         "type": "tabs",
         "children": [
           {
-            "id": "c716d8ebd8d8501c",
+            "id": "1dc81b4d7dfbbdcd",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "5dab920151df8c29",
+            "id": "7a590de2565c53c3",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "f5e21d492db59d60",
+            "id": "3d2f71aa58f9b567",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -68,19 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "a92b2523fbc4071a",
+    "id": "540faed05139ce45",
     "type": "split",
     "children": [
       {
-        "id": "d622f8aa825d8237",
+        "id": "f538f6d68d9d06a2",
         "type": "tabs",
         "children": [
           {
-            "id": "2076be9c21dcf8a3",
+            "id": "ee191e2f8163ccd9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Variables, Constants and Literals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "e3ec40f38921591e",
+            "id": "8f71dcc46c67ec82",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Variables, Constants and Literals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "36d49b38002c28e2",
+            "id": "05c7ef0782980bfa",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "9430aed6edb42452",
+            "id": "fd4f683193c97058",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Variables, Constants and Literals.md"
+              }
             }
           }
         ]
@@ -138,25 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c716d8ebd8d8501c",
+  "active": "692db55cb78269b7",
   "lastOpenFiles": [
-    "Introduction/Set up C environment for windows.md",
-    "Introduction/Set up C environment for macOS.md",
-    "Introduction/C language and its history.md",
-    "Getting Started with C/Data Types.md",
-    "Getting Started with C/Variables, Constants and Literals.md",
-    "Getting Started with C/Keywords and Identifiers.md",
-    "Getting Started with C/C language and its history.md",
-    "Getting Started with C/Set up C environment for windows.md",
-    "Getting Started with C/Set up C environment for macOS.md",
-    "Getting Started with C",
-    "untitled folder",
-    "Introduction",
-    "Variables, Constants and Literals.md",
-    "Keywords and Identifiers.md",
     "Data Types.md",
-    "Set up C environment for macOS.md",
-    "Set up C environment for windows.md",
-    "C language and its history.md"
+    "Keywords and Identifiers.md",
+    "Variables, Constants and Literals.md"
   ]
 }
