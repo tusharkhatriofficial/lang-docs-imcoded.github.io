@@ -1,4 +1,4 @@
-<!-- 5-->
+<!-- 6-->
 # Operators
 
 Operators are an essential part of any programming language, including C. They are symbols that instruct the compiler to perform specific arithmetic or logical operations on the operands. C programming language provides a wide range of operators, which can be classified into different categories.
@@ -235,3 +235,248 @@ f = 0
 ```
 
 As you can see, each assignment operator performs a different operation and produces a different result. The addition assignment adds the value on the right-hand side to the value of the variable on the left-hand side, the subtraction assignment subtracts the value on the right-hand side from the value of the variable on the left-hand side, and so on. The modulus assignment calculates the remainder when the variable on the left-hand side is divided by the value on the right-hand side.
+
+
+
+## Relational Operators
+
+Relational operators are used to compare two values and return a Boolean value (true or false) based on the result of the comparison. There are six relational operators in C, which are listed below:
+
+-   `==` (equal to)
+-   `!=` (not equal to)
+-   `<` (less than)
+-   `>` (greater than)
+-   `<=` (less than or equal to)
+-   `>=` (greater than or equal to)
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+    int b = 7;
+
+    printf("%d == %d is %d\n", a, b, a == b);
+    printf("%d != %d is %d\n", a, b, a != b);
+    printf("%d < %d is %d\n", a, b, a < b);
+    printf("%d > %d is %d\n", a, b, a > b);
+    printf("%d <= %d is %d\n", a, b, a <= b);
+    printf("%d >= %d is %d\n", a, b, a >= b);
+
+    return 0;
+}
+```
+
+In this example, we declare two variables `a` and `b` with values of 5 and 7 respectively. We then use the relational operators to compare these values and print the results. The output of the program would be:
+
+```zsh
+5 == 7 is 0
+5 != 7 is 1
+5 < 7 is 1
+5 > 7 is 0
+5 <= 7 is 1
+5 >= 7 is 0
+```
+
+We can see that `a == b` is false, `a != b` is true, `a < b` is true, `a > b` is false, `a <= b` is true, and `a >= b` is false. These results are determined by the values of `a` and `b` and the conditions specified by the relational operators.
+
+
+
+## Logical Operators
+
+Logical operators are used to combine multiple relational expressions to form more complex conditions in C. There are three logical operators in C: `&&` (logical AND), `||` (logical OR), and `!` (logical NOT).
+
+
+- __AND__
+
+The logical AND (`&&`) operator returns true if both the left and right operands are true. It returns false otherwise. For example, `x && y` would return true if both `x` and `y` are true.
+
+
+- __OR__
+
+The logical OR (`||`) operator returns true if either the left or right operand is true. It returns false only if both operands are false. For example, `x || y` would return true if either `x` or `y` (or both) are true.
+
+
+- __NOT__
+
+The logical NOT (`!`) operator is a unary operator that returns the opposite of its operand. It returns true if the operand is false and false if the operand is true. For example, `!x` would return true if `x` is false.
+
+Here's an example program that demonstrates the use of logical operators:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+    int y = 7;
+    int z = 10;
+
+    // Logical AND
+    int result_and = (x > 0) && (y > 0);
+    printf("Logical AND result: %d\n", result_and);
+
+    // Logical OR
+    int result_or = (x == 0) || (y == 0);
+    printf("Logical OR result: %d\n", result_or);
+
+    // Logical NOT
+    int result_not = !(x == 0);
+    printf("Logical NOT result: %d\n", result_not);
+
+    return 0;
+}
+```
+
+```zsh
+Logical AND result: 1
+Logical OR result: 0
+Logical NOT result: 1
+```
+
+In the above example, we declare three variables `x`, `y`, and `z` with values of 5, 7, and 10 respectively. We then use the logical operators to combine relational expressions and print the results.
+
+The first example uses the logical AND operator to check if both `x` and `y` are greater than zero. We store the result of the expression `(x > 0) && (y > 0)` in the variable `result_and` and print it out. Since both `x` and `y` are greater than zero, the result is true, which is represented by the value `1`.
+
+The second example uses the logical OR operator to check if either `x` or `y` (or both) are equal to zero. We store the result of the expression `(x == 0) || (y == 0)` in the variable `result_or` and print it out. Since neither `x` nor `y` are equal to zero, the result is false, which is represented by the value `0`.
+
+The third example uses the logical NOT operator to check if `x` is not equal to zero. We store the result of the expression `!(x == 0)` in the variable `result_not` and print it out. Since `x` is not equal to zero, the result is true, which is represented by the value `1`.
+
+
+
+## Bitwise Operators
+
+Bitwise operators are operators that perform operations on individual bits of a number. These operators are useful when working with low-level programming or when performing specific operations on binary values. In C, there are six bitwise operators:
+
+1.  Bitwise AND operator: `&`
+2.  Bitwise OR operator: `|`
+3.  Bitwise XOR (exclusive OR) operator: `^`
+4.  Bitwise complement (one's complement) operator: `~`
+5.  Left shift operator: `<<`
+6.  Right shift operator: `>>`
+
+- __Bitwise AND (`&`)__: This operator performs a logical AND operation on each pair of corresponding bits in two integers. The resulting bit is set to 1 only if both bits are 1.
+
+```c
+int a = 5;     // Binary representation: 0101
+int b = 3;     // Binary representation: 0011
+int result = a & b;   // Binary representation: 0001 (1 in decimal)
+
+printf("Result of AND operation: %d", result);
+```
+
+```zsh
+Result of AND operation: 1
+```
+
+- __Bitwise OR (`|`)__: This operator performs a logical OR operation on each pair of corresponding bits in two integers. The resulting bit is set to 1 if either of the bits is 1.
+
+```c
+int a = 5;     // Binary representation: 0101
+int b = 3;     // Binary representation: 0011
+int result = a | b;   // Binary representation: 0111 (7 in decimal)
+
+printf("Result of OR operation: %d", result);
+```
+
+```zsh
+Result of OR operation: 7
+```
+
+- __Bitwise XOR (`^`)__: This operator performs a logical XOR (exclusive OR) operation on each pair of corresponding bits in two integers. The resulting bit is set to 1 only if one of the bits is 1 and the other is 0.
+
+```c
+int a = 5;     // Binary representation: 0101
+int b = 3;     // Binary representation: 0011
+int result = a ^ b;   // Binary representation: 0110 (6 in decimal)
+
+printf("Result of XOR operation: %d", result);
+```
+
+```c
+Result of XOR operation: 6
+```
+
+- __Bitwise NOT/Complement (`~`)__: This operator performs a unary operation on a single integer and flips all the bits. All 0 bits become 1, and all 1 bits become 0.
+
+```c
+int a = 5;     // Binary representation: 0101
+int result = ~a;   // Binary representation: 1010 (-6 in decimal)
+
+printf("Result of complement operation: %d", result);
+```
+
+```zsh
+Result of complement operation: -6
+```
+
+- __Left Shift (`<<`)__: This operator shifts all the bits in an integer to the left by a specified number of bits. The shifted bits are filled with 0s.
+
+```c
+int a = 5;     // Binary representation: 0101
+int result = a << 2;   // Binary representation: 010100 (20 in decimal)
+
+printf("Result of left shift operation: %d", result);
+```
+
+```zsh
+Result of left shift operation: 20
+```
+
+- __Right Shift (`>>`)__: This operator shifts all the bits in an integer to the right by a specified number of bits. The shifted bits are filled with 0s if the integer is unsigned, and with the sign bit if the integer is signed.
+
+```c
+int a = 5;     // Binary representation: 0101
+int result = a >> 1;   // Binary representation: 0010 (2 in decimal)
+
+printf("Result of right shift operation: %d", result);
+```
+
+```zsh
+Result of right shift operation: 2
+```
+
+
+
+## The sizeof operator
+
+The `sizeof` operator is used to determine the size of a variable or data type in bytes. It returns the size of its operand in bytes, which can be useful when allocating memory or working with data structures.
+
+The `sizeof` operator is a unary operator, which means it operates on a single operand. The syntax for using `sizeof` is as follows:
+
+```zsh
+sizeof (operand)
+```
+
+The operand can be a variable, data type, or expression. Here are a few examples:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    char c = 'a';
+    float f = 3.14;
+    
+    printf("Size of int: %lu bytes\n", sizeof(int));
+    printf("Size of char: %lu bytes\n", sizeof(char));
+    printf("Size of float: %lu bytes\n", sizeof(float));
+    printf("Size of a: %lu bytes\n", sizeof(a));
+    printf("Size of c: %lu bytes\n", sizeof(c));
+    printf("Size of f: %lu bytes\n", sizeof(f));
+    
+    return 0;
+}
+```
+
+```zsh
+Size of int: 4 bytes
+Size of char: 1 bytes
+Size of float: 4 bytes
+Size of a: 4 bytes
+Size of c: 1 bytes
+Size of f: 4 bytes
+```
+
+In the above example, the `sizeof` operator is used to determine the size of various data types, as well as the size of specific variables.
+
+It is important to note that the size of a data type may vary depending on the platform and the compiler being used. Therefore, it is always a good practice to use the `sizeof` operator to ensure that you are allocating the correct amount of memory for your data.
