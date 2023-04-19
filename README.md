@@ -14,3 +14,14 @@
 - Typecasting.
 - Input/Output.
 - Operators.
+
+## Control Structures
+
+- If-else Statements.
+- Switch Statements.
+- For loop.
+- While loop.
+- Do-while loop.
+- Nested loops.
+- Break and Continue Statements.
+- Goto Statement.
