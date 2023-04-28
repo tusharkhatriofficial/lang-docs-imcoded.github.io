@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7dbedd7418e309c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Switch Statements.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "if and else.md",
+                "file": "Switch Statements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "if and else.md",
+                "file": "Switch Statements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "if and else.md"
+                "file": "Switch Statements.md"
               }
             }
           }
@@ -146,8 +159,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac457d7591a5476a",
+  "active": "7dbedd7418e309c2",
   "lastOpenFiles": [
-    "if and else.md"
+    "if and else.md",
+    "Switch Statements.md"
   ]
 }
