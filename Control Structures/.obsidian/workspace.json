@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "If and else.md",
+                "file": "if and else.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "If and else.md",
+                "file": "if and else.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "If and else.md",
+                "file": "if and else.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "If and else.md"
+                "file": "if and else.md"
               }
             }
           }
@@ -148,6 +148,6 @@
   },
   "active": "ac457d7591a5476a",
   "lastOpenFiles": [
-    "If and else.md"
+    "if and else.md"
   ]
 }
