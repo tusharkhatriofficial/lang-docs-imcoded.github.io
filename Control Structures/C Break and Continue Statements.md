@@ -1,0 +1,112 @@
+<!-- 7-->
+# Break and Continue Statements
+
+The break and continue statements are two control statements in C language that are used to alter the normal flow of execution within a loop. These statements are particularly useful in situations where we need to control the flow of the loop based on some condition.
+
+
+
+## Break Statement
+
+The break statement is used to exit a loop or switch statement. When the break statement is encountered inside a loop, the loop is immediately terminated, and control is passed to the next statement after the loop. This is particularly useful when we need to exit the loop based on some condition.
+
+__Syntax:__
+
+The syntax for the break statement in C language is as follows:
+
+```c
+for (initialization; condition; increment/decrement) {
+    if (condition) {
+        break;
+    }
+}
+```
+
+or 
+
+```c
+while (condition) {
+    if (condition) {
+        break;
+    }
+}
+```
+
+__Example:__
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i;
+    for (i = 1; i <= 10; i++) {
+        if (i == 5) {
+            break;
+        }
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+
+```zsh
+1 2 3 4
+```
+
+In this example, we have used a for loop to print the values of i from 1 to 10, but we have used a break statement to terminate the loop when i equals 5. As a result, only the values of i up to 4 are printed.
+
+
+
+## Continue Statement:
+
+The continue statement is used to skip a particular iteration of a loop and continue with the next iteration. When the continue statement is encountered inside a loop, the current iteration is immediately terminated, and control is passed to the next iteration. This is particularly useful when we need to skip certain iterations based on some condition.
+
+__Syntax:__
+
+The syntax for the continue statement in C language is as follows:
+
+```c
+for (initialization; condition; increment/decrement) {
+    if (condition) {
+        continue;
+    }
+    /* code block to be executed */
+}
+```
+
+or
+
+```c
+while (condition) {
+    if (condition) {
+        continue;
+    }
+    /* code block to be executed */
+}
+```
+
+__Example:__
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i;
+    for (i = 1; i <= 10; i++) {
+        if (i == 5) {
+            continue;
+        }
+        printf("%d ", i);
+    }
+    return 0;
+}
+```
+
+```zsh
+1 2 3 4 6 7 8 9 10
+```
+
+In the above example, we have used a for loop to print the values of i from 1 to 10, but we have used a continue statement to skip the value of i when it equals 5. As a result, all other values of i are printed except 5.
+
+<hr>
+
+The break and continue statements are two powerful control statements in C language that allow us to control the flow of execution within a loop. The break statement is used to exit a loop or switch statement, while the continue statement is used to skip a particular iteration of a loop and continue with the next iteration. These statements are particularly useful in situations where we need to control the flow of the loop based on some condition.

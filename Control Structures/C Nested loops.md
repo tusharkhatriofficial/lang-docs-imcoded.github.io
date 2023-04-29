@@ -1,0 +1,95 @@
+<!-- 6-->
+# C Nested loops
+
+In C language, a loop statement can be placed inside another loop statement. This is called a nested loop. Nested loops are used when we need to repeat a set of actions multiple times within a loop.
+
+__Syntax:__
+
+The syntax for a nested loop in C language is as follows:
+
+```c
+for (initialization; condition; increment/decrement) {
+    for (initialization; condition; increment/decrement) {
+        /* code block to be executed */
+    }
+}
+```
+
+or 
+
+```c
+while (condition1) {
+    while (condition2) {
+        /* code block to be executed */
+    }
+}
+```
+
+__Working:__
+
+In a nested loop, the outer loop runs the specified number of times, while the inner loop runs the specified number of times for each iteration of the outer loop. This means that the inner loop is executed in full for each iteration of the outer loop.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    for (i = 1; i <= 3; i++) {
+        for (j = 1; j <= 3; j++) {
+            printf("%d %d\n", i, j);
+        }
+    }
+    return 0;
+}
+```
+
+```zsh
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+```
+
+In the above example, we have used two for loops to print the values of two variables i and j. The outer loop runs from 1 to 3, and the inner loop runs from 1 to 3 for each iteration of the outer loop. The printf statement inside the inner loop prints the values of i and j.
+
+Another example using a while loop:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 1, j = 1;
+    while (i <= 3) {
+        while (j <= 3) {
+            printf("%d %d\n", i, j);
+            j++;
+        }
+        j = 1;
+        i++;
+    }
+    return 0;
+}
+```
+
+```zsh
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+```
+
+In the above example, we have used two while loops to print the values of i and j. The outer while loop runs from 1 to 3, and the inner while loop runs from 1 to 3 for each iteration of the outer while loop. The printf statement inside the inner while loop prints the values of i and j.
+
+<hr>
+
+Nested loops in C language are useful when we need to repeat a set of actions multiple times within a loop. They allow us to execute a block of code multiple times in a structured and organized manner. However, care should be taken while using nested loops as they can lead to a lot of iterations and slow down the program.
