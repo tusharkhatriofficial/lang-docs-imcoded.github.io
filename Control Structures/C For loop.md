@@ -155,5 +155,6 @@ __Explanation:__
 - The inner loop body prints an asterisk and a space.
 - The outer loop body prints a newline character after the inner loop completes, which creates a new row of asterisks in the triangle pattern.
 
+<hr>
 
 The "for loop" is a powerful tool in C programming that allows us to perform repetitive tasks efficiently. We can use it to iterate over arrays, print patterns, calculate sums, and perform many other tasks. By understanding the syntax and examples provided, you should be able to use for loops effectively in your programs.
