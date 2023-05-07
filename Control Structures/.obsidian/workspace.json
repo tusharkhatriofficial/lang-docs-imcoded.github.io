@@ -85,6 +85,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "C Nested loops.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a7dce61d2ae286b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "C Break and Continue Statements.md",
                 "mode": "source",
                 "source": false
@@ -92,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -135,6 +147,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "59fee47fb6c419e1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -219,13 +239,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "31d1fbbffe024929",
+  "active": "6a7dce61d2ae286b",
   "lastOpenFiles": [
-    "C Nested loops.md",
     "C Goto Statement.md",
-    "C if and else.md",
     "C Break and Continue Statements.md",
     "C Do-while loop.md",
+    "C Nested loops.md",
+    "C if and else.md",
     "C while loop.md",
     "C For loop.md",
     "C Switch Statements.md"
