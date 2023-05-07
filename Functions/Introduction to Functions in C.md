@@ -1,4 +1,6 @@
 <!-- 1-->
+# Introduction to Functions in C
+
 In C, a function is a group of statements that perform a specific task. The task can be anything from performing a simple calculation to manipulating complex data structures. Functions have the following characteristics:
 
 
