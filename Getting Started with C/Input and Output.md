@@ -1,4 +1,3 @@
-<!-- 5-->
 # Input/Output
 
 Input and output (I/O) are essential aspects of programming, including C. C provides several standard library functions for performing I/O operations, such as reading input from the user, printing output to the console, and working with files.

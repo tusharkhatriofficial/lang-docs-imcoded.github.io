@@ -1,4 +1,3 @@
-<!-- 1-->
 # Keywords and Identifiers
 
 Keywords and identifiers are the two fundamental building blocks of any programming language. In C programming language, keywords and identifiers are used to create meaningful and structured code.

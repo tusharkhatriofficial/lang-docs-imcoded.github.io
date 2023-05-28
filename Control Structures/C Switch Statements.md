@@ -1,4 +1,3 @@
-<!-- 2-->
 # Switch Statements
 
 The **switch case statement** is used when we have multiple options and we need to perform a different task for each option. The switch statement is a conditional statement in C that allows you to test the value of a variable and execute different code blocks based on its value. It provides an efficient and concise way of writing conditional statements with multiple cases.

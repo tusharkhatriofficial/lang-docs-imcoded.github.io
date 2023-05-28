@@ -1,4 +1,3 @@
-<!-- 8-->
 # C Goto Statement
 
 The Goto statement is a control flow statement in the C programming language that allows the programmer to transfer the program's control to a labeled statement within the same function. Although the Goto statement can be used to solve some programming problems, it is generally considered to be bad programming practice and should be used with caution.

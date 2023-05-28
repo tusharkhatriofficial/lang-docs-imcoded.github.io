@@ -1,4 +1,3 @@
-<!-- 7-->
 # Break and Continue Statements
 
 The break and continue statements are two control statements in C language that are used to alter the normal flow of execution within a loop. These statements are particularly useful in situations where we need to control the flow of the loop based on some condition.

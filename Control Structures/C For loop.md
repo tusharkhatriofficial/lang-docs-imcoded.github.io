@@ -1,4 +1,3 @@
-<!-- 3-->
 # For loop
 
 In programming, a loop is used to repeat a block of code until the specified condition is met.

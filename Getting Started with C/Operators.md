@@ -1,4 +1,3 @@
-<!-- 6-->
 # Operators
 
 Operators are an essential part of any programming language, including C. They are symbols that instruct the compiler to perform specific arithmetic or logical operations on the operands. C programming language provides a wide range of operators, which can be classified into different categories.

@@ -1,4 +1,3 @@
-<!-- 4-->
 # C while loop
 
 In the previous tutorial, we learned about `for` loop. In this tutorial, we will learn about `while`  loop.

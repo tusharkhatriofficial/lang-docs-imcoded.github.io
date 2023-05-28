@@ -1,4 +1,3 @@
-<!-- 2-->
 # Set up C environment for windows
 
 Setting up a C development environment on Windows requires several steps. Below given is a basic guide to get you started:

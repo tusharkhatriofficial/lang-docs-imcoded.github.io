@@ -1,4 +1,3 @@
-<!-- 3-->
 # C Variables, Constants and Literals
 
 In this tutorial, you will learn about variables, constants, and literals in C programming language. By understanding how to use variables, constants, and literals effectively, you can create powerful and flexible programs in C. You will learn how to declare and initialize variables, how to define constants, and how to work with different types of literals.

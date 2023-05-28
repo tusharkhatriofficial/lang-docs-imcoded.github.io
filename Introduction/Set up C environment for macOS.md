@@ -1,4 +1,3 @@
-<!-- 3-->
 # Set up C environment for macOS
 
 To develop C programs on macOS, there are two things that we need:

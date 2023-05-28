@@ -1,4 +1,3 @@
-<!-- 6-->
 # C Nested loops
 
 In C language, a loop statement can be placed inside another loop statement. This is called a nested loop. Nested loops are used when we need to repeat a set of actions multiple times within a loop.

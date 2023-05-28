@@ -1,4 +1,3 @@
-<!-- 4-->
 # Typecasting
 
 Typecasting, also known as type conversion, is the process of converting a value from one data type to another. In C programming language, there are two types of typecasting: implicit typecasting (also known as coercion) and explicit typecasting.

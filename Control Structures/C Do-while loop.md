@@ -1,4 +1,3 @@
-<!-- 5-->
 # C Do-while loop
 
 A do-while loop is a loop statement used in C language that is used to execute a block of code repeatedly based on a given condition. The main difference between the do-while loop and the while loop is that the do-while loop guarantees at __least one execution of the code block__, while the while loop may not execute the code block at all if the condition is not satisfied.

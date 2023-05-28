@@ -1,4 +1,3 @@
-<!-- 1-->
 # if and else in C
 
 From here, the real coding part begins. Gear up to travel to the next part of coding. This will be a lot of fun.

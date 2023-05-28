@@ -1,4 +1,3 @@
-<!-- 1-->
 ## C language and its history
 
 C language is a high-level programming language that was originally developed in the early 1970s by `Dennis Ritchie` at [Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs). C was designed to be a general-purpose language that could be used for a wide range of programming tasks, including system programming, application programming, and web development.
