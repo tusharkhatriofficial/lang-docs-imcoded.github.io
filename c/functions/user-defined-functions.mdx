@@ -1,0 +1,110 @@
+## Overview
+
+In C programming, user-defined functions allow you to create your own functions tailored to specific tasks. These functions are written by the programmer to perform a particular operation or set of operations. By using user-defined functions, you can break down complex tasks into smaller, more manageable parts and improve code reusability and modularity.
+
+This documentation provides an in-depth explanation of how to create user-defined functions in C, including function parameters and return values. Examples are provided at each step to illustrate the concepts.
+
+## Creating User-Defined Functions
+
+To create a user-defined function in C, you need to follow these steps:
+
+1. **Function Declaration**: Declare the function prototype before its first use. The function declaration includes the return type, function name, and parameter list (if any). It informs the compiler about the existence and signature of the function.
+    
+2. **Function Definition**: Define the function body, which contains the actual code to be executed when the function is called. The function definition includes the return type, function name, parameter list, and the code block within braces.
+    
+3. **Function Call**: Call the function from another part of the program to execute the code inside the function body. Pass any required arguments to the function if it has parameters.
+    
+
+Let's explore each step in detail with examples.
+
+## Function Declaration
+
+A function declaration is used to inform the compiler about the existence and signature of the function. It includes the return type, function name, and parameter list (if any). The function declaration is usually placed before the function call or at the beginning of the program.
+
+```c
+return_type function_name(parameter_list);
+```
+
+Example:
+
+```c
+int calculateSum(int num1, int num2);
+```
+
+- The `calculateSum` function is declared with a return type of `int`.
+- It takes two integer parameters, `num1` and `num2`.
+- The semicolon at the end indicates the end of the declaration.
+
+## Function Definition
+
+The function definition contains the actual code to be executed when the function is called. It includes the return type, function name, parameter list, and the code block within braces.
+
+```c
+return_type function_name(parameter_list) {
+    // Function body
+    // Code to be executed
+    // return statement (optional)
+}
+```
+
+Example:
+
+```c
+int calculateSum(int num1, int num2) {
+    int sum = num1 + num2;
+    return sum;
+}
+```
+
+- The `calculateSum` function is defined with a return type of `int`.
+- It takes two integer parameters, `num1` and `num2`.
+- Inside the function body, we declare a variable `sum` and assign it the sum of `num1` and `num2`.
+- The `return` statement is used to send the value of `sum` back to the caller.
+
+## Function Call
+
+To execute the code inside a user-defined function, you need to call it from another part of the program. The function call includes the function name and any required arguments (values to be passed to the function if it has parameters).
+
+```c
+return_type variable_name = function_name(argument_list);
+```
+
+Example:
+
+```c
+int result = calculateSum(5, 3);
+```
+
+- The `calculateSum` function is called with arguments `5` and `3`.
+- The returned sum is stored in the `result` variable of type `int`.
+
+## Using User-Defined Functions
+
+Now that you understand how to create user-defined functions, you can incorporate them into your program's logic. Here's an example that demonstrates the usage of a user-defined function to calculate the factorial of a number:
+
+```c
+#include <stdio.h>
+
+int factorial(int num) {
+    if (num == 0)
+        return 1;
+    else
+        return num * factorial(num - 1);
+}
+
+int main() {
+    int number = 5;
+    int result = factorial(number);
+    printf("The factorial of %d is: %d\n", number, result);
+    return 0;
+}
+```
+
+1. The `factorial` function calculates the factorial of a given number recursively.
+2. If the number is `0`, it returns `1` as the base case.
+3. Otherwise, it multiplies the number with the factorial of `(num - 1)` and returns the result.
+4. In the `main` function, we declare a variable `number` and assign it the value `5`.
+5. We call the `factorial` function with `number` as the argument and store the result in the `result` variable.
+6. Finally, we print the value of `result`, which displays the factorial of `5`.
+
+In this documentation, you learned about creating user-defined functions in C. By following the steps of function declaration, definition, and call, you can create functions tailored to your specific tasks. User-defined functions improve code reusability, modularity, and allow you to break down complex tasks into smaller parts. With the provided examples, you can confidently create and utilize user-defined functions in your C programs.
