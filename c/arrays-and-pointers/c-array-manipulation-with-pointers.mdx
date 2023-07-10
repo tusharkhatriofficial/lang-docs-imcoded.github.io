@@ -1,0 +1,131 @@
+# Advanced Array Manipulation with Pointers in C
+
+## Overview
+
+Pointers in C offer powerful capabilities for advanced array manipulation. They allow you to swap array elements efficiently, pass arrays to functions using pointers, and work with pointer-to-array and array-of-pointers. This documentation provides an overview of these advanced array manipulation techniques using pointers in C.
+
+## Swapping Array Elements using Pointers
+
+Swapping array elements is a common operation in array manipulation. By using pointers, you can efficiently swap elements without the need for temporary variables. Here's an example of swapping two elements of an integer array using pointers:
+
+```c
+#include <stdio.h>
+
+void swap(int *ptr1, int *ptr2) {
+    int temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+}
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+
+    // Swapping the second and fourth elements
+    swap(&numbers[1], &numbers[3]);
+
+    // Printing the modified array
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+```
+
+- In the above code, an integer array `numbers` is declared and initialized with values `10`, `20`, `30`, `40`, and `50`.
+- The `swap` function takes two integer pointers `ptr1` and `ptr2` as arguments.
+- Inside the function, the values pointed to by `ptr1` and `ptr2` are swapped using a temporary variable `temp`.
+- In the `main` function, the `swap` function is called, passing the addresses of the second and fourth elements of the array.
+- As a result, the second and fourth elements of the array are swapped.
+- Finally, the modified array is printed to verify the element swap.
+
+## Passing Arrays to Functions using Pointers
+
+To pass arrays to functions efficiently, you can use pointers as function parameters. By passing the base address of an array to a function, you enable direct access and manipulation of the array elements. Here's an example of a function that calculates the sum of array elements using pointers:
+
+```c
+#include <stdio.h>
+
+int calculateSum(int *ptr, int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += *ptr;
+        ptr++;
+    }
+    return sum;
+}
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+    int sum = calculateSum(numbers, size);
+
+    printf("Sum of array elements: %d\n", sum);
+
+    return 0;
+}
+```
+
+- In the above code, an integer array `numbers` is declared and initialized with values `10`, `20`, `30`, `40`, and `50`.
+- The `calculateSum` function takes an integer pointer `ptr` and the size of the array as arguments.
+- Inside the function, a `for` loop is used to iterate over the array elements.
+- The value pointed to by `ptr` is added to the `sum` variable, and the pointer is incremented to access the next element.
+- In the `main` function, the `calculateSum` function is called, passing the array `numbers` and its size.
+- The returned sum is stored in the `sum` variable.
+- Finally, the sum of the array elements is printed.
+
+## Pointer-to-Array
+
+A pointer-to-array is a pointer that points to the entire array, allowing you to access the array elements using pointer arithmetic. By using pointer-to-array, you can navigate through the array and manipulate its elements efficiently. Here's an example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+    int *ptr = numbers;   // Pointer-to-array
+
+    // Accessing and printing array elements using pointer-to-array
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i));
+    }
+    printf("\n");
+
+    return 0;
+}
+```
+
+- In the above code, an integer array `numbers` is declared and initialized with values `10`, `20`, `30`, `40`, and `50`.
+- An integer pointer `ptr` is declared and assigned the base address of the array.
+- Inside the `for` loop, pointer arithmetic is used to access each array element by incrementing the pointer by the loop index.
+- The array elements are printed by dereferencing the pointer using the `*` operator.
+- Finally, the array elements are printed.
+
+## Array-of-Pointers
+
+An array-of-pointers is an array in which each element is a pointer. It allows you to store and access multiple pointers efficiently, enabling complex data structures and advanced manipulation. Here's an example of an array-of-pointers that stores strings:
+
+```c
+#include <stdio.h>
+
+int main() {
+    char *names[] = {"John", "Alice", "Bob", "Sarah"};
+    int size = sizeof(names) / sizeof(names[0]);
+
+    // Accessing and printing the strings using array-of-pointers
+    for (int i = 0; i < size; i++) {
+        printf("%s\n", names[i]);
+    }
+
+    return 0;
+}
+```
+
+- In the above code, an array-of-pointers `names` is declared, which stores strings.
+- Each element of the array is a pointer to a character array (string).
+- The array is initialized with strings `"John"`, `"Alice"`, `"Bob"`, and `"Sarah"`.
+- The size of the array is calculated by dividing the total size of the array by the size of a single element.
+- Inside the `for` loop, each string is printed using the `%s` format specifier.
+
