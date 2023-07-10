@@ -1,0 +1,143 @@
+# Examples of C Functions
+
+In this section, we will explore multiple examples that demonstrate how to create and use functions in C. These examples cover various use cases and illustrate best practices for function implementation. Let's dive in!
+
+## Addition Function
+
+```c
+#include <stdio.h>
+
+int add(int num1, int num2) {
+    return num1 + num2;
+}
+
+int main() {
+    int result = add(5, 3);
+    printf("The sum is: %d\n", result);
+    return 0;
+}
+```
+
+- The `add` function takes two integer parameters, `num1` and `num2`, and returns their sum.
+- In the `main` function, we call the `add` function with the values `5` and `3`. The returned sum is stored in the `result` variable.
+- Finally, we print the value of `result`, which displays the sum of `5` and `3`.
+
+## Maximum of Three Numbers
+
+```c
+#include <stdio.h>
+
+int findMax(int num1, int num2, int num3) {
+    int max = num1;
+    if (num2 > max)
+        max = num2;
+    if (num3 > max)
+        max = num3;
+    return max;
+}
+
+int main() {
+    int result = findMax(7, 3, 9);
+    printf("The maximum number is: %d\n", result);
+    return 0;
+}
+```
+
+- The `findMax` function takes three integer parameters, `num1`, `num2`, and `num3`, and returns the maximum of the three numbers.
+- Inside the function, we initialize the `max` variable with the value of `num1`. Then we compare `num2` and `num3` with `max` and update it accordingly.
+- In the `main` function, we call the `findMax` function with the values `7`, `3`, and `9`. The returned maximum number is stored in the `result` variable.
+- Finally, we print the value of `result`, which displays the maximum number among the three values.
+
+## Factorial Calculation
+
+```c
+#include <stdio.h>
+
+int factorial(int num) {
+    if (num == 0)
+        return 1;
+    else
+        return num * factorial(num - 1);
+}
+
+int main() {
+    int number = 5;
+    int result = factorial(number);
+    printf("The factorial of %d is: %d\n", number, result);
+    return 0;
+}
+```
+
+- The `factorial` function calculates the factorial of a given number recursively.
+- If the number is `0`, it returns `1` as the base case.
+- Otherwise, it multiplies the number with the factorial of `(num - 1)` and returns the result.
+- In the `main` function, we call the `factorial` function with the value `5`. The returned factorial is stored in the `result` variable.
+- Finally, we print the value of `result`, which displays the factorial of `5`.
+
+## Print an Array
+
+```c
+#include <stdio.h>
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printArray(arr, size);
+    return 0;
+}
+```
+
+- The `printArray` function takes an array `arr` and its size as parameters and prints all the elements of the array.
+- In the `main` function, we declare an array `arr` with values `1`, `2`, `3`, `4`, and `5`.
+- We calculate the size of the array using the `sizeof` operator and divide it by the size of a single element to determine the number of elements.
+- We call the `printArray` function, passing the array `arr` and its size as arguments.
+- The function iterates over the elements of the array using a `for` loop and prints each element using the `printf` function.
+
+## Palindrome Check
+
+```c
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+bool isPalindrome(char str[]) {
+    int left = 0;
+    int right = strlen(str) - 1;
+    
+    while (left < right) {
+        if (str[left] != str[right])
+            return false;
+        left++;
+        right--;
+    }
+    return true;
+}
+
+int main() {
+    char word[] = "racecar";
+    
+    if (isPalindrome(word))
+        printf("%s is a palindrome.\n", word);
+    else
+        printf("%s is not a palindrome.\n", word);
+    
+    return 0;
+}
+```
+
+- The `isPalindrome` function checks whether a given string `str` is a palindrome (reads the same forwards and backward).
+- It uses two pointers, `left` and `right`, starting from the beginning and end of the string, respectively.
+- The function iterates until the `left` pointer crosses the `right` pointer.
+- If any characters at corresponding positions are different, the function returns `false`.
+- If the loop completes without any mismatches, the function returns `true`.
+- In the `main` function, we declare a character array `word` with the value `"racecar"`.
+- We call the `isPalindrome` function with `word` as the argument and use an `if-else` statement to print whether it is a palindrome or not.
+
+In this documentation, you explored multiple examples of creating and using functions in C. These examples covered various use cases, including arithmetic operations, finding maximum values, factorial calculation, array manipulation, and string checks. By understanding these examples and the best practices involved, you can effectively utilize functions to modularize your code, promote reusability, and solve a wide range of problems in your C programs.
