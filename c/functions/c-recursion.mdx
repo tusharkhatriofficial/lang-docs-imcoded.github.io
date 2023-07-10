@@ -1,0 +1,204 @@
+# Recursion in C
+
+## Overview
+
+Recursion is a powerful concept in programming that allows a function to call itself. It provides an elegant and efficient solution for solving complex problems by breaking them down into smaller, simpler subproblems. This documentation provides an in-depth explanation of recursive functions in C, including their structure, implementation, and various use cases.
+
+## Understanding Recursion
+
+Recursion involves breaking down a complex problem into smaller subproblems that are similar in nature. Each subproblem is solved by invoking the same function recursively until a base case is reached. The base case represents the simplest form of the problem and allows the recursion to terminate.
+
+To implement a recursive function, you need to define two essential components:
+
+1. **Base Case**: The base case defines the simplest form of the problem that can be solved directly without further recursion. It acts as the termination condition for the recursive calls.
+    
+2. **Recursive Case**: The recursive case defines how the function calls itself to solve a larger problem by reducing it to a smaller subproblem. The recursive case must gradually converge towards the base case.
+    
+
+## Recursive Function Structure
+
+The structure of a recursive function consists of the base case and the recursive case. Here's the general structure:
+
+```c
+return_type recursive_function(parameters) {
+    // Base case
+    if (base_case_condition) {
+        // Perform base case operation(s)
+        return base_case_value;
+    }
+    
+    // Recursive case
+    // Perform recursive operation(s)
+    return recursive_function(modified_parameters);
+}
+```
+
+Let's explore this structure with an example.
+
+## Factorial Calculation
+
+Calculating the factorial of a number is a classic example of recursion. The factorial of a non-negative integer `n` is the product of all positive integers less than or equal to `n`. The factorial of `0` is defined as `1`.
+
+```c
+#include <stdio.h>
+
+int factorial(int n) {
+    // Base case
+    if (n == 0)
+        return 1;
+    
+    // Recursive case
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int number = 5;
+    int result = factorial(number);
+    printf("The factorial of %d is: %d\n", number, result);
+    return 0;
+}
+```
+
+1. In the `factorial` function, we define the base case condition as `n == 0`. If the input `n` reaches `0`, the function returns `1` as the factorial of `0`.
+    
+2. In the recursive case, the function calculates the factorial of `n` by multiplying it with the factorial of `(n - 1)`. This gradually reduces `n` until it reaches `0`.
+    
+3. In the `main` function, we declare a variable `number` and assign it the value `5`.
+    
+4. We call the `factorial` function with `number` as the argument and store the result in the `result` variable.
+    
+5. Finally, we print the value of `result`, which displays the factorial of `5`.
+
+### Fibonacci Series
+
+The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones. It can be calculated recursively as follows:
+
+```c
+#include <stdio.h>
+
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int number = 7;
+    int result = fibonacci(number);
+    printf("The Fibonacci number at position %d is: %d\n", number, result);
+    return 0;
+}
+```
+
+- In the `fibonacci` function, the base case is defined as `n <= 1`. If `n` is `0` or `1`, the function returns `n` itself.
+- In the recursive case, the function calculates the Fibonacci number by adding the two preceding Fibonacci numbers `(n - 1)` and `(n - 2)`.
+- In the `main` function, we call the `fibonacci` function with `number` as the argument and store the result in the `result` variable.
+- Finally, we print the value of `result`, which displays the Fibonacci number at position `7`.
+
+### Tower of Hanoi
+
+The Tower of Hanoi is a classic puzzle that involves moving disks from one peg to another with the help of an intermediate peg. The puzzle can be solved recursively using the following steps:
+
+```c
+#include <stdio.h>
+
+void towerOfHanoi(int n, char source, char destination, char auxiliary) {
+    if (n == 1) {
+        printf("Move disk 1 from %c to %c\n", source, destination);
+        return;
+    }
+    
+    towerOfHanoi(n - 1, source, auxiliary, destination);
+    printf("Move disk %d from %c to %c\n", n, source, destination);
+    towerOfHanoi(n - 1, auxiliary, destination, source);
+}
+
+int main() {
+    int numDisks = 3;
+    towerOfHanoi(numDisks, 'A', 'C', 'B');
+    return 0;
+}
+```
+
+- The `towerOfHanoi` function takes four parameters: the number of disks `n`, the source peg, the destination peg, and the auxiliary peg.
+- The base case is when `n` is `1`. In this case, it directly moves the disk from the source peg to the destination peg.
+- In the recursive case, the function recursively moves `(n - 1)` disks from the source peg to the auxiliary peg, then moves the largest disk from the source peg to the destination peg, and finally moves the `(n - 1)` disks from the auxiliary peg to the destination peg.
+- In the `main` function, we call the `towerOfHanoi` function with the number of disks `numDisks` and the peg labels 'A', 'C', and 'B' as arguments representing the source, destination, and auxiliary pegs, respectively.
+- The function execution displays the required moves to solve the Tower of Hanoi puzzle with 3 disks.
+
+### Binary Search
+
+Binary search is a search algorithm that finds the position of a target value within a sorted array. It can be implemented recursively as follows:
+
+```c
+#include <stdio.h>
+
+int binarySearch(int arr[], int target, int low, int high) {
+    if (low > high)
+        return -1;
+    
+    int mid = (low + high) / 2;
+    
+    if (arr[mid] == target)
+        return mid;
+    else if (arr[mid] < target)
+        return binarySearch(arr, target, mid + 1, high);
+    else
+        return binarySearch(arr, target, low, mid - 1);
+}
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 10, 12, 14, 16};
+    int target = 10;
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    int result = binarySearch(arr, target, 0, size - 1);
+    if (result == -1)
+        printf("Element not found\n");
+    else
+        printf("Element found at index: %d\n", result);
+    
+    return 0;
+}
+```
+
+- The `binarySearch` function takes an array `arr`, a target value to search for, and the low and high indices that define the search range.
+- The base case is when the `low` index becomes greater than the `high` index. In this case, the element is not found, and `-1` is returned.
+- In the recursive case, the function calculates the `mid` index as the average of `low` and `high`.
+- If the element at the `mid` index matches the target value, the `mid` index is returned.
+- If the element at the `mid` index is less than the target value, the function recursively searches the right half of the array.
+- If the element at the `mid` index is greater than the target value, the function recursively searches the left half of the array.
+- In the `main` function, we declare an array `arr`, a target value `target`, and the size of the array `size`.
+- We call the `binarySearch` function with the array, target, and the indices representing the entire array range.
+- Finally, we check the returned result and display whether the element is found or not, along with the index.
+
+## Use Cases of Recursion
+
+Recursion is widely used in various scenarios where problems can be divided into smaller subproblems. Some common use cases of recursion include:
+
+1. **Mathematical Operations**: Recursive functions are often used to solve mathematical problems such as factorial, Fibonacci sequence, exponentiation, etc.
+    
+2. **Tree and Graph Traversal**: Recursive functions can efficiently traverse tree and graph data structures by recursively visiting nodes or vertices.
+    
+3. **Sorting and Searching**: Recursive algorithms like quick sort and binary search utilise the divide-and-conquer technique to solve sorting and searching problems.
+    
+4. **Backtracking**: Recursive backtracking algorithms are used to find all possible solutions or paths to a problem, such as solving puzzles or generating permutations.
+    
+5. **Fractals and Graphics**: Recursive functions are employed to generate complex patterns, fractals, and graphics by repeatedly applying smaller patterns.
+    
+6. **Dynamic Programming**: Recursive functions, combined with memoization or dynamic programming techniques, can solve optimisation problems efficiently.
+
+## Guidelines for Recursion
+
+When working with recursive functions, keep the following guidelines in mind:
+
+1. **Base Case**: Ensure that the base case is well-defined and reachable, so the recursion terminates.
+    
+2. **Progress Towards Base Case**: Make sure that each recursive call brings you closer to the base case. Otherwise, the recursion may run indefinitely.
+    
+3. **Stack Usage**: Recursive functions consume memory on the stack for each recursive call. Avoid excessive recursion to prevent stack overflow errors.
+    
+4. **Performance Considerations**: Recursive solutions may not always be the most efficient. Analyse the problem and consider iterative or optimised approaches when necessary.
+
+In this documentation, you learned about recursion in C and its implementation in recursive functions. Recursion allows functions to call themselves, solving complex problems by breaking them down into smaller subproblems. By understanding the structure of recursive functions and their use cases, you can effectively utilise recursion to solve various problems. Remember to define the base case, design the recursive case, and consider the guidelines for efficient and error-free recursion.
