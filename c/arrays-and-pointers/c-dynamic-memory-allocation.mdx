@@ -1,0 +1,146 @@
+# Dynamic Memory Allocation in C
+
+## Overview
+
+Dynamic memory allocation in C allows you to allocate and deallocate memory during program execution. It provides flexibility in managing memory resources and is essential for handling variable-sized data structures. This documentation provides an overview of dynamic memory allocation in C, covering topics such as allocating and deallocating memory using pointers, and explaining the `malloc()`, `calloc()`, and `realloc()` functions.
+
+## Allocating Memory with `malloc()`
+
+The `malloc()` function in C is used to dynamically allocate memory from the heap during program execution. It takes the number of bytes to be allocated as an argument and returns a pointer to the allocated memory block. The `malloc()` function does not initialize the memory, so the content of the allocated memory block is unpredictable until explicitly initialized. Here's an example:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+
+    ptr = (int *)malloc(5 * sizeof(int));   // Allocating memory for 5 integers
+
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Access and manipulate the allocated memory
+
+    free(ptr);   // Deallocating the allocated memory
+
+    return 0;
+}
+```
+
+- In the above code, an integer pointer `ptr` is declared.
+- The `malloc()` function is called to allocate memory for 5 integers (5 times the size of `int`).
+- The allocated memory address is assigned to the `ptr` pointer.
+- Before accessing the allocated memory, it is essential to check whether the allocation was successful. If `malloc()` returns `NULL`, it means the memory allocation failed.
+- After finishing the use of the allocated memory, it must be deallocated using the `free()` function to prevent memory leaks.
+
+## Allocating Memory with `calloc()`
+
+The `calloc()` function is another way to dynamically allocate memory in C. It is similar to `malloc()`, but it also initializes the allocated memory block with zero. It takes two arguments: the number of elements to be allocated and the size of each element. The total memory allocated is calculated by multiplying the number of elements with the size of each element. Here's an example:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+
+    ptr = (int *)calloc(5, sizeof(int));   // Allocating memory for 5 integers
+
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Access and manipulate the allocated memory
+
+    free(ptr);   // Deallocating the allocated memory
+
+    return 0;
+}
+```
+
+- In the above code, an integer pointer `ptr` is declared.
+- The `calloc()` function is called to allocate memory for 5 integers (5 times the size of `int`).
+- The allocated memory address is assigned to the `ptr` pointer.
+- The allocated memory block is automatically initialized with zero.
+- Like `malloc()`, it is important to check whether the memory allocation was successful and deallocate the memory using `free()` when it is no longer needed.
+
+## Reallocating Memory with `realloc()`
+
+The `realloc()` function is used to resize dynamically allocated memory blocks. It allows you to change the size of the memory block pointed to by a pointer. The function takes two arguments: the pointer to the existing memory block and the new size in bytes. Here's an example:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+
+    ptr = (int *)malloc(5 * sizeof(int));   // Allocating memory for 5 integers
+
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Access and manipulate the allocated memory
+
+    ptr = (int *)realloc(ptr, 10 * sizeof(int));   // Resizing the memory for 10 integers
+
+    if (ptr == NULL) {
+        printf("Memory reallocation failed\n");
+        return 1;
+    }
+
+    // Access and manipulate the resized memory
+
+    free(ptr);   // Deallocating the allocated memory
+
+    return 0;
+}
+```
+
+- In the above code, an integer pointer `ptr` is declared.
+- The `malloc()` function is called to allocate memory for 5 integers (5 times the size of `int`).
+- The allocated memory address is assigned to the `ptr` pointer.
+- After using the allocated memory, we can resize the memory block using `realloc()`.
+- The `realloc()` function is called with the pointer `ptr` and the new size of 10 integers.
+- If the reallocation is successful, the pointer `ptr` is updated with the new memory address.
+- It is important to check whether the reallocation was successful and deallocate the memory using `free()` when it is no longer needed.
+
+## Deallocating Memory with `free()`
+
+When dynamic memory allocation is used, it is crucial to deallocate the allocated memory after its use to prevent memory leaks. The `free()` function is used to release the memory previously allocated by `malloc()`, `calloc()`, or `realloc()`. Here's an example:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr;
+
+    ptr = (int *)malloc(5 * sizeof(int));   // Allocating memory for 5 integers
+
+    if (ptr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    // Access and manipulate the allocated memory
+
+    free(ptr);   // Deallocating the allocated memory
+
+    return 0;
+}
+```
+
+- In the above code, an integer pointer `ptr` is declared.
+- The `malloc()` function is called to allocate memory for 5 integers (5 times the size of `int`).
+- The allocated memory address is assigned to the `ptr` pointer.
+- After finishing the use of the allocated memory, it is deallocated using the `free()` function.
+- It is important to deallocate memory to release resources and prevent memory leaks.
+
+In this documentation, you learned about dynamic memory allocation in C. You explored the `malloc()`, `calloc()`, and `realloc()` functions, which allow you to allocate memory dynamically during program execution. It is crucial to properly manage dynamically allocated memory, checking for successful allocation, freeing the memory when it is no longer needed, and preventing memory leaks. Dynamic memory allocation provides flexibility and efficiency in handling variable-sized data structures and is a fundamental concept in advanced C programming.
