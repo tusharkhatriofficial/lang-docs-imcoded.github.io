@@ -1,0 +1,114 @@
+# Storage Classes in C Functions
+
+## Overview
+
+In C programming, storage classes define the scope, lifetime, and visibility of variables and functions within a program. Storage classes play a crucial role in memory management and control the accessibility of variables and functions. This documentation provides an overview of the storage classes specifically related to functions in C, including `auto`, `register`, `static`, and `extern`.
+
+## Auto Storage Class
+
+The `auto` storage class is the default storage class for local variables within a function. When a variable is declared with the `auto` storage class, it is automatically allocated memory each time the function is called and deallocated when the function returns.
+
+Example:
+
+```c
+#include <stdio.h>
+
+void foo() {
+    auto int num = 10;
+    printf("Value of num: %d\n", num);
+}
+
+int main() {
+    foo();
+    return 0;
+}
+```
+
+- In the `foo` function, the variable `num` is declared with the `auto` storage class. It is allocated memory automatically upon function invocation and deallocated when the function returns.
+- The value of `num` is set to `10`, and it is printed using the `printf` function.
+- In the `main` function, we call the `foo` function, which prints the value of `num`.
+
+## Register Storage Class
+
+The `register` storage class is used to declare local variables that should be stored in CPU registers for faster access. Note that the `register` storage class is a request to the compiler, and the compiler may choose to ignore it.
+
+Example:
+
+```c
+#include <stdio.h>
+
+void foo() {
+    register int i;
+    for (i = 1; i <= 5; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int main() {
+    foo();
+    return 0;
+}
+```
+
+- In the `foo` function, the variable `i` is declared with the `register` storage class. It suggests that the variable should be stored in a CPU register for faster access.
+- The `for` loop iterates from `1` to `5`, and the value of `i` is printed using the `printf` function.
+- In the `main` function, we call the `foo` function, which prints the numbers `1 2 3 4 5`.
+
+## Static Storage Class
+
+The `static` storage class is used to declare variables and functions that retain their values and scope across multiple function calls. Variables with the `static` storage class are initialized only once, and their values persist even after the function returns.
+
+Example:
+
+```c
+#include <stdio.h>
+
+void foo() {
+    static int count = 0;
+    count++;
+    printf("Count: %d\n", count);
+}
+
+int main() {
+    foo();
+    foo();
+    foo();
+    return 0;
+}
+```
+
+- In the `foo` function, the variable `count` is declared with the `static` storage class. It is initialized only once when the function is first called.
+- The `count` variable retains its value across multiple function calls. Each time the function is called, the value of `count` is incremented, and it is printed using the `printf` function.
+- In the `main` function, we call the `foo` function three times, which prints the values of `count` as `1`, `2`, and `3`.
+
+## Extern Storage Class
+
+The `extern` storage class is used to declare variables or functions that are defined in other files. When a variable or function is declared with the `extern` storage class, it is not allocated memory. Instead, it indicates that the variable or function is defined somewhere else in the program.
+
+Example:
+
+**File: main.c**
+
+```c
+#include <stdio.h>
+
+extern int globalVariable; // Declaration of the global variable
+
+int main() {
+    printf("Value of globalVariable: %d\n", globalVariable);
+    return 0;
+}
+```
+
+**File: helper.c**
+
+```c
+int globalVariable = 42; // Definition of the global variable
+```
+
+- In the `main.c` file, the `extern` keyword is used to declare the `globalVariable`, indicating that it is defined in another file.
+- In the `helper.c` file, the `globalVariable` is defined and initialized with a value of `42`.
+- In the `main` function, we print the value of `globalVariable` using the `printf` function. The value is obtained from the external definition in the `helper.c` file.
+
+In this documentation, you learned about the storage classes related to functions in C: `auto`, `register`, `static`, and `extern`. The `auto` storage class is the default for local variables, the `register` storage class suggests CPU register storage, the `static` storage class retains values across function calls, and the `extern` storage class is used for variables and functions defined elsewhere in the program. Understanding these storage classes helps you control the lifetime, scope, and accessibility of variables and functions in your C programs.
