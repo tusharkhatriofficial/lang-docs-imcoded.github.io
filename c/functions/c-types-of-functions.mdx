@@ -1,0 +1,100 @@
+# Types of Functions in C
+
+## Overview
+
+In C programming, functions can be categorized into different types based on their behavior and purpose. Understanding these types of functions is essential for writing efficient and modular code. This documentation provides a description of the different types of functions in C, including void functions, value returning functions, and library functions.
+
+## Void Functions
+
+**Void functions** are functions that do not return a value. They are used when a function only needs to perform a specific task without providing any output. Void functions are defined with a return type of `void`.
+
+```c
+void function_name(parameter_list) {
+    // Function body
+    // Code to be executed
+}
+```
+
+Example:
+
+```c
+#include <stdio.h>
+
+void greet() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    greet(); // Calling the greet function
+    return 0;
+}
+```
+
+- The `greet` function is a void function because it does not return any value.
+- Inside the function body, we use the `printf` function to display the greeting message.
+- In the `main` function, we call the `greet` function, which prints "Hello, World!" to the console.
+
+## Value Returning Functions
+
+**Value returning functions** are functions that return a value after performing a specific task. They are used when a function needs to compute a result and provide it as output to the caller. Value returning functions are defined with a return type other than `void`.
+
+```c
+return_type function_name(parameter_list) {
+    // Function body
+    // Code to be executed
+    // return statement
+}
+```
+
+Example:
+
+```c
+#include <stdio.h>
+
+int square(int num) {
+    return num * num;
+}
+
+int main() {
+    int number = 5;
+    int result = square(number);
+    printf("The square of %d is: %d\n", number, result);
+    return 0;
+}
+```
+
+- The `square` function is a value returning function because it returns an integer value.
+- Inside the function body, we multiply the `num` parameter by itself and use the `return` statement to send the result back to the caller.
+- In the `main` function, we declare a variable `number` and assign it the value `5`.
+- We call the `square` function with `number` as the argument and store the result in the `result` variable.
+- Finally, we print the value of `result`, which displays the square of `5`.
+
+## Library Functions
+
+**Library functions** are functions that are already provided by C libraries and can be used in your programs without having to define them yourself. These functions cover a wide range of tasks and are designed to be reusable across different programs. To use library functions, you need to include the appropriate header file that contains the function declaration.
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n"); // Using the printf library function
+    return 0;
+}
+```
+
+- The `printf` function is a library function from the `stdio.h` library.
+- It is used to print formatted output to the console.
+- In the `main` function, we call the `printf` function to display the "Hello, World!" message.
+
+In this documentation, you learned about the different types of functions in C: void functions, value returning functions, and library functions. 
+
+- Void functions are used when a function does not need to return a value.
+
+- Value returning functions compute a result and provide it as output.
+
+- Library functions are pre-defined functions provided by C libraries. 
+
+By understanding the purpose and behaviour of each function type, you can choose
+the appropriate type for different tasks in your C programs.
