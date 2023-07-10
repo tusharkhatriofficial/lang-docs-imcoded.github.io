@@ -34,3 +34,11 @@
 - __Recursion in C:__ Explanation of recursive functions in C, including their structure, implementation, and use cases.
 - __Storage Classes in C Functions:__ Overview of the storage classes in C functions, including auto, register, static, and extern.
 - __Examples of C Functions:__ Multiple examples of how to create and use functions in C, covering various use cases and demonstrating best practices.
+
+## Arrays and Pointers
+
+- Introduction to Arrays, Declaring arrays in C, Accessing and modifying array elements.
+-  Introduction to Pointers, Declaring pointers in C, Using pointers to manipulate memory, Accessing array elements using pointers.
+- Dynamic Memory Allocation, Allocating and deallocating memory using pointers, Explaining malloc(), calloc(), and realloc().
+- Advanced Array Manipulation with Pointers, Swapping array elements using pointers, Passing arrays to functions using pointers, Pointer-to-array and array-of-pointers.
+- Error Handling and Best Practices, Handling common errors related to arrays and pointers, Managing dynamically allocated memory, Best practices for using arrays and pointers.
