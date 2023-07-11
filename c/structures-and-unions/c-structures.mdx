@@ -1,0 +1,271 @@
+# C Structures
+
+C structures are user-defined data types that allow you to group related data elements of different types into a single unit. Structures provide a way to organize and represent complex data structures in C programs. They are widely used for modeling real-world entities and organizing data efficiently.
+
+## Declaring and Defining a Structure
+
+To declare a structure, you use the `struct` keyword followed by the structure name. Inside the structure, you define the individual members and their data types. Here's an example:
+
+```c
+#include <stdio.h>
+
+// Structure declaration
+struct Student {
+    char name[50];
+    int age;
+    float grade;
+};
+
+int main() {
+    // Structure variable declaration
+    struct Student student1;
+
+    // Accessing structure members
+    strcpy(student1.name, "John");
+    student1.age = 20;
+    student1.grade = 85.5;
+
+    // Printing structure members
+    printf("Name: %s\n", student1.name);
+    printf("Age: %d\n", student1.age);
+    printf("Grade: %.2f\n", student1.grade);
+
+    return 0;
+}
+```
+
+```zsh
+Name: John
+Age: 20
+Grade: 85.50
+```
+
+- In the above code, we declare a structure `Student` with three members: `name` (character array), `age` (integer), and `grade` (float).
+- Inside the `main()` function, we declare a structure variable `student1` of type `struct Student`.
+- We access and modify the structure members using the dot (`.`) operator.
+- Finally, we print the structure members using `printf()`.
+
+## Initializing Structure Variables
+
+Structure variables can be initialized at the time of declaration using curly braces `{}`. Here's an example:
+
+```c
+#include <stdio.h>
+
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    // Structure variable initialization
+    struct Point p = {10, 20};
+
+    // Accessing structure members
+    printf("x: %d\n", p.x);
+    printf("y: %d\n", p.y);
+
+    return 0;
+}
+```
+
+```zsh
+x: 10
+y: 20
+```
+
+- In the above code, we declare a structure `Point` with two members: `x` and `y`, both of type `int`.
+- We initialize the structure variable `p` with values `{10, 20}` at the time of declaration.
+- We access and print the structure members using `printf()`.
+
+## Accessing Structure Members
+
+To access structure members, you use the dot (`.`) operator. Here's an example:
+
+```c
+#include <stdio.h>
+
+struct Rectangle {
+    int length;
+    int width;
+};
+
+int main() {
+    struct Rectangle rect;
+
+    // Accessing structure members
+    rect.length = 10;
+    rect.width = 5;
+
+    // Calculating area
+    int area = rect.length * rect.width;
+
+    printf("Length: %d\n", rect.length);
+    printf("Width: %d\n", rect.width);
+    printf("Area: %d\n", area);
+
+    return 0;
+}
+```
+
+
+```zsh
+Length: 10
+Width: 5
+Area: 50
+```
+
+- In the above code, we declare a structure `Rectangle` with two members: `length` and `width`, both of type `int`.
+- We declare a structure variable `rect` of type `struct Rectangle`.
+- We access and modify the structure members `length` and `width` using the dot (`.`) operator.
+- We calculate the area of the rectangle by multiplying the `length` and `width` members.
+- Finally, we print the structure members and the calculated area using `printf()`.
+
+## Nesting Structures
+
+In C, structures can be nested inside other structures as members. This allows for creating more complex data structures. Here's an example:
+
+```c
+#include <stdio.h>
+
+struct Address {
+    char street[50];
+    char city[50];
+    char state[20];
+    int zip;
+};
+
+struct Person {
+    char name[50];
+    int age;
+    struct Address address;  // Nested structure
+};
+
+int main() {
+    struct Person person;
+
+    // Accessing nested structure members
+    strcpy(person.name, "John");
+    person.age = 25;
+    strcpy(person.address.street, "123 Main Street");
+    strcpy(person.address.city, "New York");
+    strcpy(person.address.state, "NY");
+    person.address.zip = 10001;
+
+    // Printing structure members
+    printf("Name: %s\n", person.name);
+    printf("Age: %d\n", person.age);
+    printf("Street: %s\n", person.address.street);
+    printf("City: %s\n", person.address.city);
+    printf("State: %s\n", person.address.state);
+    printf("ZIP: %d\n", person.address.zip);
+
+    return 0;
+}
+```
+
+```zsh
+Name: John
+Age: 25
+Street: 123 Main Street
+City: New York
+State: NY
+ZIP: 10001
+```
+
+- In the above code, we define two structures: `Address` and `Person`.
+- The `Address` structure has members for `street`, `city`, `state`, and `zip`.
+- The `Person` structure has members for `name`, `age`, and an embedded structure `address` of type `Address`.
+- We declare a structure variable `person` of type `struct Person`.
+- We access and modify the structure members using the dot (`.`) operator, both for the top-level and nested structures.
+- Finally, we print the structure members using `printf()`.
+
+## Array of Structures
+
+In C, you can create arrays of structures, allowing you to store multiple instances of a structure in a contiguous block of memory. Here's an example:
+
+```c
+#include <stdio.h>
+
+struct Employee {
+    char name[50];
+    int age;
+    float salary;
+};
+
+int main() {
+    struct Employee employees[3];
+
+    // Input employee details
+    for (int i = 0; i < 3; i++) {
+        printf("Enter details for employee %d:\n", i + 1);
+
+        printf("Name: ");
+        scanf("%s", employees[i].name);
+
+        printf("Age: ");
+        scanf("%d", &employees[i].age);
+
+        printf("Salary: ");
+        scanf("%f", &employees[i].salary);
+    }
+
+    // Display employee details
+    printf("\nEmployee Details:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("Employee %d\n", i + 1);
+        printf("Name: %s\n", employees[i].name);
+        printf("Age: %d\n", employees[i].age);
+        printf("Salary: %.2f\n\n", employees[i].salary);
+    }
+
+    return 0;
+}
+```
+
+- In the above code, we define a structure `Employee` with members for `name`, `age`, and `salary`.
+- We create an array of `Employee` structures named `employees` with a size of 3.
+- Using a loop, we input the details of each employee from the user.
+- We access and modify the structure members of each employee using the dot (`.`) operator.
+- After inputting the details, we display the employee details using another loop.
+
+## Structure Size and Memory Alignment
+
+The size of a structure in C may not be equal to the sum of the sizes of its members due to padding and memory alignment. The `sizeof` operator can be used to determine the size of a structure. Here's an example:
+
+```c
+#include <stdio.h>
+
+struct Example {
+    char c;
+    int i;
+    double d;
+};
+
+int main() {
+    struct Example ex;
+
+    printf("Size of structure: %zu bytes\n", sizeof(ex));
+
+    return 0;
+}
+```
+
+```zsh
+Size of structure: 24 bytes
+```
+
+- In the above code, we define a structure `Example` with members of different data types: `char`, `int`, and `double`.
+- We declare a structure variable `ex` of type `struct Example`.
+- We use the `sizeof` operator to determine the size of the structure in bytes and print it using `printf()`.
+
+## Structure Examples and Use Cases
+
+Structures are widely used to model real-world entities and organize related data efficiently. Some common use cases for structures include:
+
+- Storing and manipulating data related to students, employees, or any other entity with multiple attributes.
+- Representing geometric shapes, where each structure member holds information about a specific attribute (e.g., length, width, area).
+- Creating a database record structure that contains various fields (e.g., name, age, address) for storing information in a tabular format.
+- Building complex data structures like linked lists, stacks, or queues using structures to define the individual nodes or elements.
+
+Structures provide a flexible and powerful way to work with data in C, allowing you to organize and manipulate complex information effectively.
