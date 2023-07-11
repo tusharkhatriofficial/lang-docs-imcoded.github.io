@@ -1,0 +1,219 @@
+# Examples of Strings in C
+
+In this documentation, we will explore examples of working with strings in C.
+
+## String Input and Output
+
+```c
+#include <stdio.h>
+
+int main() {
+    char name[20];
+
+    printf("Enter your name: ");
+    scanf("%s", name);
+
+    printf("Hello, %s!\n", name);
+
+    return 0;
+}
+```
+
+```zsh
+Enter your name: John
+Hello, John!
+```
+
+- In the above code, we declare a character array `name` of size 20 to store the user's name.
+- We use `scanf()` with the `%s` format specifier to read the name from the user, assuming the name does not contain any spaces.
+- Then, we use `printf()` to display a greeting message along with the user's name.
+
+## Word Count
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_WORDS 100
+
+int countWords(const char *sentence) {
+    char copy[100];
+    strcpy(copy, sentence);
+
+    int count = 0;
+    char *token = strtok(copy, " ");
+    while (token != NULL) {
+        count++;
+        token = strtok(NULL, " ");
+    }
+
+    return count;
+}
+
+int main() {
+    char sentence[100];
+
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    int wordCount = countWords(sentence);
+
+    printf("Number of words: %d\n", wordCount);
+
+    return 0;
+}
+```
+
+```zsh
+Enter a sentence: This is a sample sentence.
+Number of words: 5
+```
+
+- In the above code, the program takes a sentence as input from the user using `fgets()` and stores it in the `sentence` array.
+- The `countWords()` function counts the number of words in the sentence. It makes use of the `strtok()` function from the `<string.h>` library to tokenize the sentence based on spaces.
+- Each word encountered increments the `count` variable.
+- The word count is then printed in the `main()` function.
+
+## Palindrome Check
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int isPalindrome(const char *word) {
+    int length = strlen(word);
+
+    for (int i = 0; i < length / 2; i++) {
+        if (word[i] != word[length - i - 1]) {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+int main() {
+    char word[50];
+
+    printf("Enter a word: ");
+    scanf("%s", word);
+
+    if (isPalindrome(word)) {
+        printf("%s is a palindrome.\n", word);
+    } else {
+        printf("%s is not a palindrome.\n", word);
+    }
+
+    return 0;
+}
+```
+
+```zsh
+Enter a word: radar
+radar is a palindrome.
+```
+
+- In the above code, the program takes a word as input from the user using `scanf()` and stores it in the `word` array.
+- The `isPalindrome()` function checks if the word is a palindrome. It compares the characters from the start of the word with the characters from the end of the word.
+- If a mismatch is found, indicating that the word is not a palindrome, the function returns 0. Otherwise, it returns 1.
+- The result is then printed in the `main()` function.
+
+## String Reversal
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+void reverseString(char *str) {
+    int length = strlen(str);
+
+    for (int i = 0; i < length / 2; i++) {
+        char temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
+    }
+}
+
+int main() {
+    char message[100];
+
+    printf("Enter a message: ");
+    fgets(message, sizeof(message), stdin);
+
+    reverseString(message);
+
+    printf("Reversed message: %s", message);
+
+    return 0;
+}
+```
+
+```zsh
+Enter a message: Hello, world!
+Reversed message: !dlrow ,olleH
+```
+
+- In the above code, the program takes a message as input from the user using `fgets()` and stores it in the `message` array.
+- The `reverseString()` function reverses the characters in the string by swapping the first character with the last character, the second character with the second-to-last character, and so on.
+- The reversed message is then printed in the `main()` function.
+
+## Find the number of vowels, consonants, digits and white spaces
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+void countCharacters(const char *str, int *vowels, int *consonants, int *digits, int *spaces) {
+    *vowels = *consonants = *digits = *spaces = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]);
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            (*vowels)++;
+        } else if ((ch >= 'a' && ch <= 'z')) {
+            (*consonants)++;
+        } else if (isdigit(ch)) {
+            (*digits)++;
+        } else if (ch == ' ') {
+            (*spaces)++;
+        }
+    }
+}
+
+int main() {
+    char input[100];
+
+    printf("Enter a string: ");
+    fgets(input, sizeof(input), stdin);
+
+    int vowels, consonants, digits, spaces;
+    countCharacters(input, &vowels, &consonants, &digits, &spaces);
+
+    printf("Number of vowels: %d\n", vowels);
+    printf("Number of consonants: %d\n", consonants);
+    printf("Number of digits: %d\n", digits);
+    printf("Number of white spaces: %d\n", spaces);
+
+    return 0;
+}
+```
+
+```zsh
+Enter a string: Hello, 123 world!
+Number of vowels: 3
+Number of consonants: 7
+Number of digits: 3
+Number of white spaces: 2
+```
+
+- In the above code, the program takes a string as input from the user using `fgets()` and stores it in the `input` array.
+- The `countCharacters()` function is defined to count the number of vowels, consonants, digits, and white spaces in the string. It takes pointers to variables for vowels, consonants, digits, and spaces as arguments.
+- The function initializes the counters for each category to 0.
+- The function then iterates through each character of the string. If the character is a vowel (case-insensitive), it increments the vowels counter. If the character is a consonant, it increments the consonants counter. If the character is a digit, it increments the digits counter. If the character is a white space, it increments the spaces counter.
+- Finally, the counts are printed in the `main()` function.
+
+By using the `tolower()` function from the `<ctype.h>` library, the program considers both uppercase and lowercase characters as vowels or consonants, ensuring case-insensitive counting.
+
+These examples demonstrate various ways to utilize strings in C, showcasing operations such as word count, palindrome checks, and string reversal. By combining string manipulation techniques with other programming concepts, you can create powerful programs that efficiently process and manipulate textual data.
+

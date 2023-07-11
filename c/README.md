@@ -42,3 +42,10 @@
 - Dynamic Memory Allocation, Allocating and deallocating memory using pointers, Explaining malloc(), calloc(), and realloc().
 - Advanced Array Manipulation with Pointers, Swapping array elements using pointers, Passing arrays to functions using pointers, Pointer-to-array and array-of-pointers.
 - Error Handling and Best Practices, Handling common errors related to arrays and pointers, Managing dynamically allocated memory, Best practices for using arrays and pointers.
+
+## Strings 
+
+- Introduction to Strings in C: Representation and Concept
+- Manipulating Strings in C: Built-in String Functions
+- Custom String Functions in C: Examples and Implementation
+- Examples of Strings in c

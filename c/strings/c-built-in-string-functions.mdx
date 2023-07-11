@@ -1,0 +1,128 @@
+# Manipulating Strings in C: Built-in String Functions
+
+## Overview
+
+C programming provides several built-in string functions that simplify string manipulation tasks. These functions are part of the standard library header `<string.h>` and offer various functionalities such as string concatenation, comparison, searching, and more. This documentation explores some commonly used built-in string functions in C.
+
+## String Length: strlen()
+
+The `strlen()` function is used to determine the length of a string (excluding the null character). It takes a string as an argument and returns the number of characters in the string. Here's an example:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char message[] = "Hello, world!";
+
+    int length = strlen(message);   // String length
+
+    printf("Length: %d\n", length);   // Printing the length
+
+    return 0;
+}
+```
+
+```zsh
+Length: 13
+```
+
+- In the above code, the `strlen()` function is used to calculate the length of the string `message`.
+- The length, excluding the null character, is returned by the function and stored in the `length` variable.
+- The length of the string is then printed using `printf()`.
+
+## String Copy: strcpy()
+
+The `strcpy()` function is used to copy one string to another. It takes two arguments: the destination string and the source string. The contents of the source string, including the null character, are copied to the destination string. Here's an example:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char source[] = "Hello, world!";
+    char destination[20];
+
+    strcpy(destination, source);   // String copy
+
+    printf("Destination: %s\n", destination);   // Printing the destination
+
+    return 0;
+}
+```
+
+```zsh
+Destination: Hello, world!
+```
+
+- In the above code, the `strcpy()` function is used to copy the contents of the `source` string to the `destination` string.
+- The destination array should have enough space to accommodate the source string.
+- The contents of the source string, including the null character, are copied to the destination string.
+- The destination string is then printed using `printf()`.
+
+## String Concatenation: strcat()
+
+The `strcat()` function is used to concatenate (append) one string to another. It takes two arguments: the destination string and the source string to be appended. The contents of the source string, including the null character, are appended to the destination string. Here's an example:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char greeting[20] = "Hello";
+    char name[] = "John";
+
+    strcat(greeting, " ");
+    strcat(greeting, name);   // String concatenation
+
+    printf("Greeting: %s\n", greeting);   // Printing the greeting
+
+    return 0;
+}
+```
+
+```zsh
+Greeting: Hello John
+```
+
+- In the above code, the `strcat()` function is used to concatenate the strings `greeting` and `name`.
+- Before appending the name, a space character is appended using `strcat()`.
+- The contents of the name string, including the null character, are appended to the greeting string.
+- The resulting greeting string is then printed using `printf()`.
+
+## String Comparison: strcmp()
+
+The `strcmp()` function is used to compare two strings lexicographically. It takes two strings as arguments and returns an integer value indicating the comparison result. Here's an example:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[] = "apple";
+    char str2[] = "banana";
+
+    int result = strcmp(str1, str2);   // String comparison
+
+    if (result < 0) {
+        printf("str1 is less than str2\n");
+    } else if (result > 0) {
+        printf("str1 is greater than str2\n");
+    } else {
+        printf("str1 is equal to str2\n");
+    }
+
+    return 0;
+}
+```
+
+```zsh
+str1 is less than str2
+```
+
+- In the above code, the `strcmp()` function is used to compare the strings `str1` and `str2`.
+- The result of the comparison is stored in the `result` variable.
+- If the result is less than 0, it indicates that `str1` is lexicographically less than `str2`.
+- The corresponding message is printed using `printf()`.
+
+In this documentation, you explored some commonly used built-in string functions in C. These functions simplify string manipulation tasks, including string length calculation, copying, concatenation, and comparison. By utilizing these functions, you can efficiently perform various operations on strings in your C programs.
