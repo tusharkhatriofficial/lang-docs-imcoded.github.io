@@ -1,0 +1,181 @@
+# C Unions
+
+## Introduction to Unions in C
+
+Unions in C are similar to structures and allow you to store different data types in a single memory location. However, unlike structures, unions can only hold one value at a time. Unions are useful when you want to conserve memory by sharing the same memory space for different data types.
+
+## Declaring and Defining a Union
+
+To declare a union, you use the `union` keyword followed by the union name. Inside the union, you define the individual members and their data types. Here's an example:
+
+```c
+#include <stdio.h>
+
+union Data {
+    int intValue;
+    float floatValue;
+    char stringValue[20];
+};
+
+int main() {
+    union Data data;
+
+    data.intValue = 10;
+    printf("Value: %d\n", data.intValue);
+
+    data.floatValue = 3.14;
+    printf("Value: %.2f\n", data.floatValue);
+
+    strcpy(data.stringValue, "Hello");
+    printf("Value: %s\n", data.stringValue);
+
+    return 0;
+}
+```
+
+```zsh
+Value: 10
+Value: 3.14
+Value: Hello
+```
+
+- In the above code, we declare a union `Data` with three members: `intValue` (integer), `floatValue` (float), and `stringValue` (character array).
+- We declare a union variable `data` of type `union Data`.
+- We access and modify the union members using the dot (`.`) operator.
+- Each time we assign a value to a member, the value is stored in the same memory location, replacing the previous value.
+
+## Accessing Union Members
+
+To access union members, you use the dot (`.`) operator similar to structures. However, since unions can only hold one value at a time, accessing a member retrieves the value based on the most recent assignment. Here's an example:
+
+```c
+#include <stdio.h>
+
+union Data {
+    int intValue;
+    float floatValue;
+    char stringValue[20];
+};
+
+int main() {
+    union Data data;
+
+    data.intValue = 10;
+    printf("Value: %d\n", data.intValue);
+
+    data.floatValue = 3.14;
+    printf("Value: %.2f\n", data.floatValue);
+
+    strcpy(data.stringValue, "Hello");
+    printf("Value: %s\n", data.stringValue);
+
+    printf("Value: %d\n", data.intValue);
+
+    return 0;
+}
+```
+
+```zsh
+Value: 10
+Value: 3.14
+Value: Hello
+Value: 1819043144
+```
+
+- In the above code, we declare a union `Data` with three members: `intValue` (integer), `floatValue` (float), and `stringValue` (character array).
+- We declare a union variable `data` of type `union Data`.
+- We assign values to different members of the union and print their values.
+- Notice that when we access `data.intValue` after assigning a value to `data.stringValue`, the value is not meaningful because accessing a member retrieves the value based on the most recent assignment.
+
+## Union Size and Memory Management
+
+The size of a union in C is determined by the size of its largest member. Unions share the same memory space for all members, allowing you to access and modify the data in different formats. Here's an example:
+
+```c
+#include <stdio.h>
+
+union Data {
+    int intValue;
+    float floatValue;
+    char stringValue[20];
+};
+
+int main() {
+    union Data data;
+
+    printf("Size of Data: %zu bytes\n", sizeof(data));
+
+    return 0;
+}
+```
+
+```zsh
+Size of Data: 20 bytes
+```
+
+- In the above code, we declare a union `Data` with three members: `intValue` (integer), `floatValue` (float), and `stringValue` (character array).
+- We declare a union variable `data` of type `union Data`.
+- We use the `sizeof` operator to determine the size of the union in bytes.
+
+## Using Unions to Save Memory
+
+Unions are particularly useful when you want to save memory by sharing the same memory space for different data types. This can be beneficial when the members of the union are not needed simultaneously. Here's an example:
+
+```c
+#include <stdio.h>
+
+union Data {
+    int intValue;
+    float floatValue;
+    char stringValue[20];
+};
+
+int main() {
+    union Data data;
+
+    data.intValue = 10;
+    printf("Value: %d\n", data.intValue);
+
+    data.floatValue = 3.14;
+    printf("Value: %.2f\n", data.floatValue);
+
+    printf("Value: %d\n", data.intValue);
+
+    return 0;
+}
+```
+
+```zsh
+Value: 10
+Value: 3.14
+Value: 1078523331
+```
+
+- In the above code, we declare a union `Data` with three members: `intValue` (integer), `floatValue` (float), and `stringValue` (character array).
+- We declare a union variable `data` of type `union Data`.
+- We assign values to different members of the union and print their values.
+- Notice that when we access `data.intValue` after assigning a value to `data.floatValue`, the value is not meaningful. This behavior allows us to save memory by reusing the same memory location for different data types.
+
+## Union vs. Structure Comparison and Use Cases
+
+Unions and structures serve different purposes in C:
+
+- Structures are used to group related data of different types together to create a composite data type. They allow simultaneous access to multiple members.
+- Unions are used to save memory by sharing the same memory space for different data types. Only one member can be accessed at a time.
+
+Use cases for unions include:
+
+- Storing different data types in a compact way when only one member is needed at a time, such as representing a value that can be an integer, float, or string.
+- Implementing variant data types where a single variable can hold different types of values based on the context.
+- Manipulating low-level data representation or type punning, such as in bit manipulation or binary file I/O.
+
+## Examples and Practical Applications of Using Unions
+
+Here are a few examples and practical applications of using unions in C:
+
+- Representing a variable that can hold different data types based on the context, such as a configuration variable that can store integers, floats, or strings.
+- Creating a variant data type to store different types of values in a single structure, such as a variant that can hold integers, floats, or booleans.
+- Efficiently storing data with different interpretations, such as storing raw binary data that can be interpreted as different data types (e.g., integer, float) based on the context.
+- Working with network protocols or file formats where data can be of different types and is represented in a compact format.
+
+By utilizing unions in your C programs, you can save memory by sharing the same memory space for different data types and create flexible data structures to handle various types of data efficiently.
