@@ -1,0 +1,116 @@
+# Fundamental File Input/Output Operations in C
+
+In C, file input/output (I/O) operations are performed using the standard library functions and data types defined in `<stdio.h>`. These functions allow you to open, read, write, and close files. Here are the fundamental file I/O operations:
+
+1. **Opening a File**: The `fopen()` function is used to open a file. It takes two parameters: the name of the file and the mode in which the file is opened. The mode determines the type of operations that can be performed on the file.
+    
+2. **Reading from a File**: The `fread()` and `fgets()` functions are used to read data from a file. `fread()` reads a specified number of bytes from the file, while `fgets()` reads a line of text. These functions store the data read into variables or buffers provided by the programmer.
+    
+3. **Writing to a File**: The `fwrite()` and `fprintf()` functions are used to write data to a file. `fwrite()` writes a specified number of bytes to the file, while `fprintf()` allows formatted output to be written. These functions take the data to be written as arguments.
+    
+4. **Closing a File**: The `fclose()` function is used to close a file after reading from or writing to it. This operation ensures that any buffered data is written to the file and releases the resources associated with the file.
+    
+
+# File Operations in C: Examples and Outputs
+
+Let's go through examples that demonstrate how to open, read, write, and close files in C. We'll also include the corresponding expected outputs.
+
+## Reading from a Text File
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    char buffer[100];
+
+    // Opening a text file for reading
+    file = fopen("example.txt", "r");
+    if (file != NULL) {
+        // Reading from the file
+        fgets(buffer, sizeof(buffer), file);
+
+        // Displaying the read data
+        printf("Data read from the file: %s\n", buffer);
+
+        // Closing the file
+        fclose(file);
+    } else {
+        printf("Error opening the file.\n");
+    }
+
+    return 0;
+}
+```
+
+```zsh
+Data read from the file: Hello, World!
+```
+
+In this example, we open the file "example.txt" in read mode using `fopen()`. Then, we read a line of text from the file using `fgets()` and store it in the `buffer` array. Finally, we print the contents of the `buffer` array, which displays the data read from the file.
+
+## Writing to a Text File
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    char data[] = "Hello, World!";
+
+    // Opening a text file for writing
+    file = fopen("example.txt", "w");
+    if (file != NULL) {
+        // Writing to the file
+        fprintf(file, "%s", data);
+
+        // Closing the file
+        fclose(file);
+        printf("Data written to the file.\n");
+    } else {
+        printf("Error opening the file.\n");
+    }
+
+    return 0;
+}
+```
+
+```zsh
+Data written to the file.
+```
+
+In this example, we open the file "example.txt" in write mode using `fopen()`. Then, we write the `data` string to the file using `fprintf()`. Finally, we close the file using `fclose()`. The output confirms that the data has been successfully written to the file.
+
+## Appending to a Text File
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    char data[] = " Appending more data.";
+
+    // Opening a text file for appending
+    file = fopen("example.txt", "a");
+    if (file != NULL) {
+        // Appending to the file
+        fprintf(file, "%s", data);
+
+        // Closing the file
+        fclose(file);
+        printf("Data appended to the file.\n");
+    } else {
+        printf("Error opening the file.\n");
+    }
+
+    return 0;
+}
+```
+
+```zsh
+Data appended to the file.
+```
+
+In this example, we open the file "example.txt" in append mode using `fopen()`. Then, we append the `data` string to the file using `fprintf()`. Finally, we close the file using `fclose()`. The output confirms that the data has been successfully appended to the file.
+
+These examples demonstrate how to perform file operations in C, including opening, reading, writing, and closing files. By using different modes when opening files, such as "r" for reading, "w" for writing, and "a" for appending, you can control the type of access and operations performed on the files.
